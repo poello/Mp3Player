@@ -35,6 +35,8 @@ public class Main {
                 break;
             }
         }
+        
+        System.exit(1);
     }
 
 }
