@@ -16,19 +16,19 @@ public class Main {
 
         while (true) {
             try {
-                //drukowanie menu
+                //menu printing
                 ConsoleUtility.print(getMenuOptions());
 
                 ConsoleUtility.chooseMenuOption(opt, songList);
 
-                // nasluchiwanie opcji wybranych przez uzytkownika
+                // listening for options selected by the user
                 opt = ConsoleUtility.retrieveValueFromInput();
 
                 if (opt.equals("4")) {
                     PlaySong.stopPlayingSong();
                     break;
                 }
-                // obsluga będów
+                // error handling
             } catch (IllegalUserInputException e) {
                 ConsoleUtility.print("Oops something is no yes =(");
             } catch (ConsoleClearError e) {
