@@ -12,11 +12,12 @@ public class Main {
     private static List<String> songList = new ArrayList<>();
 
     public static void main(String[] args) throws ConsoleClearError {
+        ConsoleUtility.defaultAddingDir(songList);
         String opt = "";
 
         while (true) {
             try {
-                //menu printing
+                //printing menu
                 ConsoleUtility.print(getMenuOptions());
 
                 ConsoleUtility.chooseMenuOption(opt, songList);
@@ -35,8 +36,7 @@ public class Main {
                 break;
             }
         }
-        
+
         System.exit(1);
     }
-
 }
