@@ -26,4 +26,20 @@ public class PlaySong {
             running = false;
         }
     }
+
+    public static void resumeSong() {
+        if(!running) {
+            mediaPlayer.play();
+            running = true;
+        }
+    }
+
+    public static void repeatSong() throws InterruptedException {
+        stopPlayingSong();
+        resumeSong();
+    }
+
+    public static void pauseSong() throws InterruptedException {
+        mediaPlayer.wait();
+    }
 }
